@@ -33,18 +33,22 @@ class LevelManager(metaclass=SingletonType):
                 level = Level(data['level-properties']['name'])
                 level.grid_width = data['map-properties']['width']
                 level.grid_height = data['map-properties']['height']
+                level.grid = [None]*(level.grid_width*level.grid_height)
 
                 for cellData in data['map']:
                     is_source = cellData["source"]
                     is_finish = cellData["finish"]
 
-                    cell = Cell(cellData["x"], cellData["y"], cellData["empty_sprite"], cellData["filled_sprite"], cellData["connections"], cellData["locked"], is_source, is_finish)
+                    x = cellData["x"]
+                    y = cellData["y"]
+
+                    cell = Cell(x, y, cellData["empty_sprite"], cellData["filled_sprite"], cellData["connections"], cellData["locked"], is_source, is_finish)
                     if is_source:
                         level.source = cell
                     if is_finish:
                         level.finish = cell
 
-                    level.grid.append(cell)
+                    level.grid[level.grid_width*y+x] = cell
 
                 level.initialize_sprite_group()
                 self.add_level(level)

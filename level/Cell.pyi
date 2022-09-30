@@ -14,6 +14,8 @@ class Cell:
 
         self._normal_sprite: str
         self._filled_sprite: str
+        self._filled: bool
+        self._rotation: int
 
         self.image: pygame.Surface
         self.rect: pygame.Rect
