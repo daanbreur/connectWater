@@ -1,0 +1,49 @@
+level-properties:
+  name: "The chosen one"
+  id: 0
+
+map-properties:
+  width: 5
+  height: 1
+
+map:
+  - x: 0
+    y: 0
+    empty_sprite: "top-right-filled.png"
+    filled_sprite: "top-right-filled.png"
+    connections: [False, False, False, False]
+    locked: False
+    source: False
+    finish: False
+  - x: 1
+    y: 0
+    empty_sprite: "top-right-filled.png"
+    filled_sprite: "top-right-filled.png"
+    connections: [ False, False, False, False ]
+    locked: False
+    source: False
+    finish: False
+  - x: 2
+    y: 0
+    empty_sprite: "top-right-filled.png"
+    filled_sprite: "top-right-filled.png"
+    connections: [False, False, False, False]
+    locked: False
+    source: False
+    finish: False
+  - x: 3
+    y: 0
+    empty_sprite: "top-right-filled.png"
+    filled_sprite: "top-right-filled.png"
+    connections: [ False, False, False, False ]
+    locked: False
+    source: False
+    finish: False
+  - x: 4
+    y: 0
+    empty_sprite: "top-right-filled.png"
+    filled_sprite: "top-right-filled.png"
+    connections: [ False, False, False, False ]
+    locked: False
+    source: False
+    finish: False
